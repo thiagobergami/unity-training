@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,10 +22,17 @@ public class Bala : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider objetoDeColisao){
-
-        if(objetoDeColisao.tag == "Inimigo")
+        
+        if (objetoDeColisao.tag == "Inimigo")
         {
-            objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(1);
+            //Reescrever!
+            try{
+                objetoDeColisao.GetComponent<ControlaInimigo>().TomarDano(50);
+            }
+            catch (Exception e) {
+                objetoDeColisao.GetComponent<ControlaLich>().TomarDano(50);
+            }
+            
         }
 
         Destroy(gameObject);

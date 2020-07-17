@@ -7,9 +7,9 @@ public class GeradorZumbis : MonoBehaviour
 
     public GameObject Zumbi;
     private float contadorTempo = 0;
-    public float TempoGerarZumbi = 1;
+    public float TempoGerarZumbi = 5;
     public LayerMask LayerZumbi;
-    private float distanciaDeGeracao = 3;
+    private readonly float distanciaDeGeracao = 10;
     private float DistanciaDoJogadorParaGeracao = 20;
     private GameObject jogador;
 

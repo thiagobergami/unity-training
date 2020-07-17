@@ -113,14 +113,14 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &230149950
+--- !u!1 &398663314
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1780199343}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 230149951}
+  - component: {fileID: 398663315}
   m_Layer: 0
   m_Name: Missing Prefab
   m_TagString: Untagged
@@ -128,12 +128,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &230149951
+--- !u!4 &398663315
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1780199343}
-  m_GameObject: {fileID: 230149950}
+  m_GameObject: {fileID: 398663314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -141,14 +141,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &637954705
+--- !u!1 &468813226
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 833629048}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 637954706}
+  - component: {fileID: 468813227}
   m_Layer: 0
   m_Name: Missing Prefab
   m_TagString: Untagged
@@ -156,12 +156,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &637954706
+--- !u!4 &468813227
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 833629048}
-  m_GameObject: {fileID: 637954705}
+  m_GameObject: {fileID: 468813226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -368,7 +368,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 637954705}
+  m_RootGameObject: {fileID: 468813226}
   m_IsPrefabParent: 0
 --- !u!1001 &1780199343
 Prefab:
@@ -415,7 +415,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 351b27a07d44e81489e46872299040e7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 230149950}
+  m_RootGameObject: {fileID: 398663314}
   m_IsPrefabParent: 0
 --- !u!1 &1934300081
 GameObject:
