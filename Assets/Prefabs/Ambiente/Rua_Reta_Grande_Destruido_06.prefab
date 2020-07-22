@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4286227395164866}
   - component: {fileID: 33264493546082566}
   - component: {fileID: 23233041453201302}
+  - component: {fileID: 64104315918812004}
   m_Layer: 8
   m_Name: Rua_Reta_Grande_Destruido_06
   m_TagString: Untagged
@@ -81,4 +82,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1345811141974184}
+  m_Mesh: {fileID: 4300000, guid: 7ca1a3d739d94e94987803ec607c3d33, type: 3}
+--- !u!64 &64104315918812004
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1345811141974184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7ca1a3d739d94e94987803ec607c3d33, type: 3}

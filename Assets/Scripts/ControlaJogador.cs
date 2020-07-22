@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlaJogador : MonoBehaviour, IMatavel
+public class ControlaJogador : MonoBehaviour, IMatavel, ICuravel
 {
         
     private Vector3 direcao;
@@ -18,8 +18,8 @@ public class ControlaJogador : MonoBehaviour, IMatavel
 
     private void Start()
     {
-        int geraTipoZumbi = Random.Range(1, 23);
-        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
+        int geraTipoJogador = Random.Range(1, 23);
+        transform.GetChild(geraTipoJogador).gameObject.SetActive(true);
         animacaoJogador = GetComponent<AnimacaoPersonagem>();
         meuMovimentoJogador = GetComponent<MovimentoJogador>();
         statusJogador = GetComponent<Status>();
@@ -62,5 +62,9 @@ public class ControlaJogador : MonoBehaviour, IMatavel
     public void Morrer() {
 
         scriptControlaInterface.GameOver();
+    }
+
+    public void CurarVida(int quantidadeDeCura) {
+        statusJogador.Vida += quantidadeDeCura;
     }
 }
