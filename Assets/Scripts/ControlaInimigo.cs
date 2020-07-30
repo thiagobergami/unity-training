@@ -14,6 +14,12 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     private Vector3 direcao;
     private float contadorVagar;
     private float tempoEntrePosicoesAleatorias = 4;
+    private float porcentagemGerarKitMedico = 0.1f;
+    public GameObject KitMedico;
+    private ControlaInterface scriptControlaInterface;
+    [HideInInspector]
+    public GeradorZumbis meuGerador;
+    public bool resolveMinhaVida = false;
 
     private MovimentoPersonagem movimentaInimigo;
     private AnimacaoPersonagem animacaoInimigo;
@@ -33,9 +39,15 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         float player = Jogador.GetComponent<CapsuleCollider>().radius;
 
         animacaoInimigo = GetComponent<AnimacaoPersonagem>();
-        animacaoInimigo.AletorizarZumbi();
+        if (resolveMinhaVida == false) {
+            animacaoInimigo.AletorizarZumbi();
+        }
+       
 
         hitDist = zumbi + player + hit;
+
+        //Preenchendo Objeto com o FindObjectTypew
+        scriptControlaInterface = GameObject.FindObjectOfType(typeof(ControlaInterface)) as ControlaInterface;
     }
     
     void FixedUpdate()
@@ -78,7 +90,20 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     public void Morrer()
     {
         ControlaAudio.instancia.PlayOneShot(AudioMorte);
-        Destroy(gameObject);
+        Destroy(gameObject,2);
+        animacaoInimigo.Morrer();
+        this.enabled = false;
+        movimentaInimigo.Morrer();
+
+        VerificarGeracaoKitMedico(porcentagemGerarKitMedico);
+        scriptControlaInterface.AtualizarQuantidadeDeZumbisMortos();
+        meuGerador.DiminuirQuantidadeDeZumbisVivos();
+    }
+
+    void VerificarGeracaoKitMedico(float porcentagemGeracao) {
+        if (Random.value <= porcentagemGeracao) {
+            Instantiate(KitMedico, transform.position, Quaternion.identity);
+        }
     }
 
     void Vagar()
@@ -88,7 +113,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         if (contadorVagar <= 0)
         {
             posicaoAleatoria = AleatorizarPosicao();
-            contadorVagar += tempoEntrePosicoesAleatorias;
+            contadorVagar += tempoEntrePosicoesAleatorias + Random.Range(-1f, 1f);
         }
         bool ficouPertoOSuficiente = Vector3.Distance(transform.position, posicaoAleatoria) <= 0.05;
 

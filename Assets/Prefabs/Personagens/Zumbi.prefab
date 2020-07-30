@@ -118,9 +118,12 @@ GameObject:
   - component: {fileID: 95175694969816346}
   - component: {fileID: 114480877788707542}
   - component: {fileID: 54163392757231022}
-  - component: {fileID: 114718209362740272}
-  - component: {fileID: 114635997827706772}
-  - component: {fileID: 114054732148649012}
+  - component: {fileID: 114149268037206008}
+  - component: {fileID: 114899746834038156}
+  - component: {fileID: 114652885886709352}
+  - component: {fileID: 114753016392148862}
+  - component: {fileID: 114346233917828092}
+  - component: {fileID: 114907622645617620}
   m_Layer: 9
   m_Name: Zumbi
   m_TagString: Inimigo
@@ -1410,7 +1413,45 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114054732148649012
+--- !u!114 &114149268037206008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf9abc2a23c7f7429b63521f220fe0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114346233917828092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7a60e8bdd64334e862a18a5f4510eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114480877788707542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59eabf864c8a857479298ebeae16c339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jogador: {fileID: 1063500868937916}
+  hit: 0.3
+  AudioMorte: {fileID: 8300000, guid: 1a046bff5e5b1484197674b1eb3f8915, type: 3}
+  KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
+  meuGerador: {fileID: 0}
+--- !u!114 &114652885886709352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1424,32 +1465,7 @@ MonoBehaviour:
   VidaInicial: 1
   Vida: 0
   Velocidade: 5
---- !u!114 &114480877788707542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1063500868937916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59eabf864c8a857479298ebeae16c339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Jogador: {fileID: 0}
-  hit: 0.3
-  AudioMorte: {fileID: 8300000, guid: ddf8ef91717f01e4b8e140ef51d7b085, type: 3}
---- !u!114 &114635997827706772
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1063500868937916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf9abc2a23c7f7429b63521f220fe0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114718209362740272
+--- !u!114 &114753016392148862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1460,6 +1476,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a9b3114aeda014294258dc37e11ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114899746834038156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7970cbd945e60fb47bdc585255649c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114907622645617620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063500868937916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26899c8c198bfcd46a8357330ef1e3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VidaInicial: 1
+  Vida: 0
+  Velocidade: 5
 --- !u!136 &136079381028039656
 CapsuleCollider:
   m_ObjectHideFlags: 1

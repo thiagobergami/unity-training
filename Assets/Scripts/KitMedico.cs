@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class KitMedico : MonoBehaviour {
     public int quantidadeDeCura;
+    private int tempoDeDestruicao = 5;
+
+    private void Start()
+    {
+        Destroy(gameObject, tempoDeDestruicao);
+    }
 
     private void OnTriggerEnter(Collider objetoDeColisao)
     {

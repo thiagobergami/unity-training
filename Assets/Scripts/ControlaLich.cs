@@ -30,7 +30,7 @@ public class ControlaLich : MonoBehaviour, IMatavel
         float player = Jogador.GetComponent<CapsuleCollider>().radius;
 
         animacaoInimigo = GetComponent<AnimacaoPersonagem>();
-        animacaoInimigo.AletorizarZumbi();
+        //animacaoInimigo.AletorizarZumbi();
 
         hitDist = zumbi + player + hit;
     }

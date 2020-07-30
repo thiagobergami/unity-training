@@ -17,12 +17,15 @@ public class AnimacaoPersonagem : MonoBehaviour {
     }
 
     public void AletorizarZumbi() {
-        int geraTipoZumbi = Random.Range(1, 28);
+        int geraTipoZumbi = Random.Range(1, 27);
         transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 
     public void Movimentar(float valorDeMovimento) {
         meuAnimator.SetFloat("Movendo", valorDeMovimento);
+    }
+    public void Morrer() {
+        meuAnimator.SetTrigger("Morrer");
     }
 
 }

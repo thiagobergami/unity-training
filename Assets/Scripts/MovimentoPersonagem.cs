@@ -19,4 +19,10 @@ public class MovimentoPersonagem : MonoBehaviour {
         Quaternion novaRotacao = Quaternion.LookRotation(direcao);
         meuRigibody.MoveRotation(novaRotacao);
     }
+    //Método que faz o zumbi desaparecer
+    public void Morrer() {
+        meuRigibody.constraints = RigidbodyConstraints.None;
+        meuRigibody.velocity = Vector3.zero;
+        GetComponent<Collider>().enabled = false;
+    }
 }

@@ -1,0 +1,78 @@
+{
+	"collection_sample": "Armas",
+	"objects": [
+		{
+			"position": 0,
+			"nome": "Pistola",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 1,
+			"nome": "Prego",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 2,
+			"nome": "Desert",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 3,
+			"nome": "MP",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 4,
+			"nome": "Pistola_USP",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 5,
+			"nome": "PistolaAgua",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 6,
+			"nome": "Revolver01",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		{
+			"position": 7,
+			"nome": "Revolver02",
+			"proximoTiro" : "20",
+			"tempRecoil" : "50",
+			"minDanoCausado" : "15",
+			"maxDanoCausado" : "30",
+			"spritBala" : ""
+		},
+		
+		]
+}
