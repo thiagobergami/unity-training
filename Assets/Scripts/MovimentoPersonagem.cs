@@ -23,6 +23,7 @@ public class MovimentoPersonagem : MonoBehaviour {
     public void Morrer() {
         meuRigibody.constraints = RigidbodyConstraints.None;
         meuRigibody.velocity = Vector3.zero;
+        meuRigibody.isKinematic = false;
         GetComponent<Collider>().enabled = false;
     }
 }

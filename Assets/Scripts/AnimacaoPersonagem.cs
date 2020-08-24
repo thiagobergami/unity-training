@@ -17,7 +17,7 @@ public class AnimacaoPersonagem : MonoBehaviour {
     }
 
     public void AletorizarZumbi() {
-        int geraTipoZumbi = Random.Range(1, 27);
+        int geraTipoZumbi = Random.Range(1, transform.childCount);
         transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 

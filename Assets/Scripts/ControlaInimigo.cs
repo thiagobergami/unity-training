@@ -58,6 +58,8 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
         movimentaInimigo.Rotacionar(direcao);
         animacaoInimigo.Movimentar(direcao.magnitude);
 
+        //Script de atacar
+
         if (distancia > 15) {
             //Criando movimentação Padrão pro zumbi;
             Vagar();

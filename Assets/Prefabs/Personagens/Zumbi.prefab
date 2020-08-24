@@ -1451,6 +1451,7 @@ MonoBehaviour:
   AudioMorte: {fileID: 8300000, guid: 1a046bff5e5b1484197674b1eb3f8915, type: 3}
   KitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
   meuGerador: {fileID: 0}
+  resolveMinhaVida: 0
 --- !u!114 &114652885886709352
 MonoBehaviour:
   m_ObjectHideFlags: 1
