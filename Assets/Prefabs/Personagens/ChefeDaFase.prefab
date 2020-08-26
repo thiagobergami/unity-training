@@ -890,6 +890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitMedico: {fileID: 1060151288946202, guid: 6150c6f66b7034ec5b3672478195682a, type: 2}
   sliderVidaChefe: {fileID: 114774964551680534}
+  ImageSlider: {fileID: 114408564299471092}
+  CorDaVIdaMaxima: {r: 0.26972917, g: 0.6544118, b: 0.04811852, a: 0}
+  CorDaVidaMinima: {r: 0.9632353, g: 0.028330477, b: 0.028330477, a: 0}
 --- !u!114 &114753016392148862
 MonoBehaviour:
   m_ObjectHideFlags: 1

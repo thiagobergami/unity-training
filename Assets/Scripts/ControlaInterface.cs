@@ -15,6 +15,7 @@ public class ControlaInterface : MonoBehaviour {
     private float tempoPontuacaoSalvo;
     private int quantidadeDeZumbisMortos;
     public Text TextoQuantidadeZumbi;
+    public Text TextoChefeAparece;
 
 	// Use this for initialization
 	void Start () {
@@ -63,6 +64,33 @@ public class ControlaInterface : MonoBehaviour {
             min = (int)tempoPontuacaoSalvo / 60;
             seg = (int)tempoPontuacaoSalvo % 60;
             TextoPontuacaoMaxima.text = string.Format("Seu melhor tempo é {0}min e {1}s", min, seg);
+        }
+    }
+    public void AparecerTextoChefeCriadao() {
+        StartCoroutine(DesaparecerTexto(2, TextoChefeAparece));
+    }
+
+    IEnumerator DesaparecerTexto (float tempoDeSumico, Text textoParaSumir) {
+        textoParaSumir.gameObject.SetActive(true);
+        Color corTexto = textoParaSumir.color;
+        corTexto.a = 1;
+        textoParaSumir.color = corTexto;
+
+        yield return new WaitForSeconds(1);
+        float contador = 0;
+        while (textoParaSumir.color.a > 0) {
+
+            contador += Time.deltaTime / tempoDeSumico;
+
+            corTexto.a = Mathf.Lerp(1, 0, contador);
+            textoParaSumir.color = corTexto;
+
+            if (textoParaSumir.color.a <= 0) {
+                textoParaSumir.gameObject.SetActive(false);
+            }
+
+            //Fazendo o while por cada frame
+            yield return null;
         }
     }
 }
